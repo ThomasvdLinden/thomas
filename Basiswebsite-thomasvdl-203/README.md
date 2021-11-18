@@ -36,15 +36,15 @@ Responsive
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-https://www.apple.com 
+https://www.tesla.com 
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-Apple - landingpage
-<img src="images/apple-landingpage.png" width="375px" alt="Landing page met daarop verschillende catagoriën (holiday, producten)">
+Tesla - landingpage
+<img src="images/tesla-landingpage.png" width="375px" alt="Landing page met daar op verschillende soorten/typen auto's">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-Apple - support  
-<img src="images/apple-support.png" width="375px" alt="pagina over apple support, verschillende navigatie balken en links.">
+Tesla - cypertruck 
+<img src="images/tesla-cybertruck" width="375px" alt="pagina met veel foto's, een video en een carousel">
  
 </details>
 
@@ -56,13 +56,13 @@ Apple - support
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdown-home.png" width="375px" alt="breakdown van de hele pagina - home">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="images/breakdown-menu.png" width="375px" alt="breakdown van een dynamisch deel">
 
-### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+### de hele pagina: 
+<img src="images/breakdown-cyber.png" width="375px" alt="breakdown van de hele pagina - cyber">
 
 </details>
 
