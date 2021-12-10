@@ -1,21 +1,20 @@
 
 
-var deButton = document.querySelector("header ul:first-of-type li:last-of-type");
+var deButton = document.querySelector("header ul:first-of-type li button");
+var deTerugButton = document.querySelector("header ul:nth-of-type(2) li button")
 
 deButton.addEventListener("click", verander);
 
 function verander() {
   let menu = document.querySelector("header ul:nth-of-type(2)");
 
-  menu.classList.toggle("show");
+  menu.classList.add("show");
 }
 
+deTerugButton.addEventListener("click", veranderTerug);
 
-var ButtonGrijs = document.querySelector("#buttons a:nth-of-type(1) p");
+function veranderTerug() {
+  let menu = document.querySelector("header ul:nth-of-type(2)");
 
-
-
-
-
-
-var ButtonWit = document.querySelector("#buttons a:nth-of-type(2) p");
+  menu.classList.remove("show")
+}

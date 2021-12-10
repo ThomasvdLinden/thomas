@@ -1,22 +1,17 @@
+
+/* -_-_-_-_-_-_-_-_ GENERAL -_-_-_-_-_-_-_-_ */
+
 :root {
   --primary-color: rgb(255 255 255);
   --secondary-color: rgb(60 62 67);
+  --cybertruck-primary-color: rgb(0 0 0);
+  --cybertruck-text-color: rgb(190 190 190);
 }
-
-/* -_-_-_-_-_-_-_-_ GENERAL -_-_-_-_-_-_-_-_ */
 
 body{
   text-align: center;
   margin: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.home main{
-  width: 100%;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  /* https://css-tricks.com/practical-css-scroll-snapping/ */
 }
 
 p{
@@ -26,71 +21,6 @@ p{
   letter-spacing: 0.04em;
 }
 
-/* -_-_-_-_-_-_-_-_ HEADER -_-_-_-_-_-_-_-_ */
-
-header{
-  position: fixed;
-  width: 100%;
-}
-
-header nav ul:first-of-type{
-  display: flex;
-  list-style: none;
-  margin: auto;
-  justify-content: space-between;
-}
-
-header ul:first-of-type li:last-of-type{
-  margin-top: 15px;
-  margin-right: 10px;
-  opacity: 0.5;
-}
-
-header nav img{
-  width: 140px;
-  margin: -16px -35px ;
-}
-
-header button{
-  background-color: grey;
-  color: black;
-  padding: 8px;
-  border-radius: 30px;
-  border: none;
-  padding: 8px 18px;
-}
-
-/* ------ menu ------ */
-
-header ul:last-of-type{
-  display: none;
-}
-
-header ul.show{
-  display: unset;
-  background-color: yellow;
-  position: absolute;
-
-}
-
-header ul.show li{
-  display: flex;
-  padding: 10px;
-  background-color: var(--primary-color);
-  width: 18em;
-  margin-top: 0px;
-  padding-left: 40px;
-  padding-right: 400px;
-}
-
-
-header ul.show li:first-of-type{
-  padding-top: 85px;
-  margin-top: -90px;
-}
-
-/* -_-_-_-_-_-_-_-_ GENERAL SECTION -_-_-_-_-_-_-_-_ */
-
 section{
   width: 100%;
   height: 100vh;
@@ -98,185 +28,251 @@ section{
   padding-top: 0px;
 }
 
+
+
+/* -_-_-_-_-_-_-_-_ GENERAL HOME -_-_-_-_-_-_-_-_ */
+
+.home main{
+  max-width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  /* https://css-tricks.com/practical-css-scroll-snapping/ */
+}
+
 .home section h1{
   color: var(--h1-color);
   font-size: 35px;
   font-weight: 500;
   color: var(--secondary-color);
-  padding-top: 130px;
+  padding-top: 3em;
   margin: 0;
 }
 
+
+
+
+
+/* -_-_-_-_-_-_-_-_ HEADER -_-_-_-_-_-_-_-_ */
+
+header{
+  position: fixed;
+  width: 100%;
+}
+
+header ul:first-of-type{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+header ul:first-of-type li img{
+  width: 8em;
+  margin-top: -2em;
+  margin-left: -2em;
+}
+
+
+header ul:first-of-type li button{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 8px;
+  border-radius: 30px;
+  border: none;
+  padding: 8px 18px;
+  margin-top: -1em;
+  margin-right: 1em;
+  transition: 0.3s;
+}
+
+header ul:first-of-type li button:focus{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ HAMBURGER MENU -_-_-_-_-_-_-_-_ */
+
+
+header ul:nth-of-type(2){
+  position: absolute;
+  margin-top: -90em;
+  background-color: var(--primary-color);
+  list-style: none;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  padding: 1em;
+  padding-top: 4em;
+  transition: 0.6s;
+}
+
+header ul.show{
+  margin-top: -6em;
+}
+
+header ul:nth-of-type(2) li{
+  padding: 1em 0.5em;
+}
+
+header ul:nth-of-type(2) a:focus{
+ color: var(--primary-color);
+ background-color: var(--secondary-color);
+ padding: 0.5em;
+}
+
+header ul:nth-of-type(2) li:first-of-type{
+  margin-top: -3.7em;
+  margin-right: 1.5em;
+  text-align: right;
+}
+
+header ul:nth-of-type(2) li:first-of-type button{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 8px;
+  border-radius: 30px;
+  border: none;
+  padding: 8px 18px;
+  transition: 0.3s;
+}
+
+header ul:nth-of-type(2) li:first-of-type button:focus{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+header ul:nth-of-type(2) li a{
+  text-decoration: none;
+  color: var(--cybertruck-secondary-color);
+}
+
+
+
+
+
+
 /* -_-_-_-_-_-_-_-_ CTA BUTTONS -_-_-_-_-_-_-_-_ */
 
-#buttons a{
+section a{
   display: inline-block;
   width: 90%;
   text-decoration: none;   
 }
 
-#buttons a p{
+a p{
   padding: 11px;    
   margin: auto;
   border-radius: 50px;
   text-transform: uppercase;
+  transition: 0,3s;
 }
 
-#buttons a:nth-of-type(1) p{
+section a:nth-of-type(1) p{
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  margin-top: 330px;
+  margin-top: 28em;
 }
 
-#buttons a:nth-of-type(2) p{
+section a:nth-of-type(2) p{
   background-color: var(--primary-color);
-  background-color: yellow;
-  color: black;
-  opacity: 0.7;
+  color: var(--cybertruck-primary-color);
   margin-top: 20px;
 }
+
+section:first-of-type a:first-of-type p{
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--secondary-color);
+  text-transform: none;
+  text-decoration: underline;
+}
+
+section:first-of-type a:first-of-type p{
+  margin-top: 1em;
+  margin-bottom: 30em;
+  background-color: none;
+}
+
+section:first-of-type a:nth-of-type(2) p{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+section:first-of-type a:nth-of-type(3) p{
+  background-color: var(--primary-color);
+  color: var(--cybertruck-primary-color);
+  margin-top: 1em;
+}
+
+section:first-of-type a:nth-of-type(4) p{
+  text-transform: none;
+  text-decoration: underline;
+  margin-top: 1em;
+}
+.home section{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+a:focus p{  
+  font-weight: 600;
+  text-shadow: 0 0 20px yellow, 1px 1px 1px rgba(206,206,206,0);
+}
+
+
+
+
+
+
 
 /* -_-_-_-_-_-_-_-_ MODEL 3 -_-_-_-_-_-_-_-_ */
 
 .home section:first-of-type{
-  background-image: url(../img/Tekengebied\ 2.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: cornflowerblue;
-  
+  background-image: url(../img/background-3.png);
+  /* Background image: https://developer.mozilla.org/en-US/docs/Web/CSS/background-image */
 }
 
 /* -_-_-_-_-_-_-_-_ MODEL Y -_-_-_-_-_-_-_-_ */
 
 .home section:nth-of-type(2){
-  background-image:url(../img/modelx.png);
-  background-color: purple;
+  background-image:url(../img/background-y.png);
 }
-
 
 /* -_-_-_-_-_-_-_-_ MODEL S -_-_-_-_-_-_-_-_ */
 
 .home section:nth-of-type(3){
   background-color: transparent;
-  background-image: url(../img/background-s.gif);
-  background-color: blue;
+  background-image: url(../img/background-s.png);
 }
-
-
 
 /* -_-_-_-_-_-_-_-_ MODEL X -_-_-_-_-_-_-_-_ */
 
 .home section:nth-of-type(4){
-  background-image: url(../img/modelx.png);
-  background-color: green;
+  background-image: url(../img/background-x.png);
 }
-
 
 /* -_-_-_-_-_-_-_-_ SOLAR EN POWERWALL -_-_-_-_-_-_-_-_ */
 
 .home section:nth-of-type(5){
-  background-image:url(../img/model-y.jpg);
-  background-color: red;
+  background-image:url(../img/background-solar.png);
 }
 
-section:nth-of-type(5) a{
-  margin: auto;
-}
-   
 /* -_-_-_-_-_-_-_-_ ACCESSOIRES -_-_-_-_-_-_-_-_ */
 
-section:nth-of-type(6) a{
-  margin: auto;
-}
-
-/* -_-_-_-_-_-_-_-_ FOOTER -_-_-_-_-_-_-_-_ */
-
-footer ul{
-  list-style: none;
-  margin-top: -8.1em;
-  margin-left: -3em;
-}
-
-footer ul li{
-margin-top: 0.5em;
+.home section:nth-of-type(6){
+  background-image:url(../img/background-accessoires.png);
 }
 
 
 
 
 
-/* -_-_-_-_-_-_-_-_ RESPONSIVENESS -_-_-_-_-_-_-_-_ */
-
-@media (min-width: 40em) {
-  section h1{
-    font-size: 2.5em;
-  }
-
-  #buttons {
-    display: flex; 
-    width: 40em;
-    margin: auto;
-    margin-top: 30em;
-  }
-
-  #buttons a p{
-    font-size: 1em;    
-  }
-
-  
-
-  #buttons a:nth-of-type(1) p{
-    margin-top: 0;
-    margin-right: 1em;
-  }
-  
-  #buttons a:nth-of-type(2) p{
-    margin-top: 0;
-    margin-left: 1em;
-  }
-}
-
-
-@media (min-width: 80em) {
-  header nav{
-    display: flex;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  header nav ul:first-of-type{
-    margin-left: 0;
-  }
-
-  header ul:first-of-type li:last-of-type{
-    display: none;
-  }
-
-  header ul:last-of-type{
-    display: flex;
-  }
-
-  header nav ul:last-of-type li{
-    display: flex;
-    margin-left: 2em;
-  }
-
-  header nav ul:last-of-type li:hover{
-    font-weight: bolder;
-  }
-
-  footer ul{
-    display: flex;
-    max-width: 40%;
-    justify-content: space-between;
-    margin: auto;
-
-  }
-  
-  footer ul li{
-    margin-top: -3.1em;
-  }
-}
 
 
 
@@ -286,21 +282,12 @@ margin-top: 0.5em;
 /* ////////////////////// CYBERTRUCK ////////////////////// */
 
 
-/* -_-_-_-_-_-_-_-_ SECTION 1 -_-_-_-_-_-_-_-_ */
 
 
-.cybertruck header img:first-of-type{
-  filter: invert(100%); 
-}
+/* -_-_-_-_-_-_-_-_  CYBERTRUCK - GENERAL-_-_-_-_-_-_-_-_ */
 
-.cybertruck header button{
-  color: var(--primary-color);
-}
-
-.cybertruck section:first-of-type{
-  background-image: url(../img/);
-  background-color: cornflowerblue;
-  padding-top: 0.1em;
+.cybertruck{
+  background-color: var(--cybertruck-primary-color);
 }
 
 .cybertruck h1{
@@ -317,7 +304,7 @@ margin-top: 0.5em;
 
 .cybertruck h2{
   width: 85%;
-  color: rgb(190 190 190);
+  color: var(--cybertruck-text-color);
   text-align: left;
   font-size: 0.9em;
   line-height: 1.5em;
@@ -330,12 +317,71 @@ margin-top: 0.5em;
 .cybertruck section p{
   width: 85%;
   margin: auto;
-  color: rgb(190 190 190);
+  color: var(--cybertruck-text-color);
   line-height: 1.5em;
   letter-spacing: 0.15em;
   font-weight: lighter;
   text-align: left;
   margin-bottom: 2em;
+}
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ SVG - Logo -_-_-_-_-_-_-_-_ */
+
+.cybertruck header img:first-of-type{
+  filter: invert(100%); 
+}
+
+.cybertruck header img:first-of-type:hover{
+  filter: invert(60%); 
+}
+
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ HEADER -_-_-_-_-_-_-_-_ */
+
+.cybertruck header{
+  background: linear-gradient(0deg, rgba(63,94,251,0) 0%, rgba(0,0,0,1) 100%);
+  /* https://cssgradient.io/ */
+}
+
+.cybertruck header ul.show{
+  background-color: var(--cybertruck-primary-color);
+}
+
+.cybertruck header ul.show li{
+  color: var(--cybertruck-text-color);
+}
+
+.cybertruck header button{
+  color: var(--primary-color);
+}
+
+.cybertruck header ul:nth-of-type(2) a:focus{
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+ }
+
+
+
+
+
+
+
+ /* -_-_-_-_-_-_-_-_ SECTION 1 -_-_-_-_-_-_-_-_ */
+ 
+.cybertruck section:first-of-type{
+  background-image: url(../img/cyber/cybertruck_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 10px;
+  padding-top: 0.1em;
 }
 
 .cybertruck section:first-of-type a{
@@ -344,7 +390,7 @@ margin-top: 0.5em;
 }
 
 .cybertruck section:first-of-type > p{
-  color: white;
+  color: var(--primary-color);
   font-size: 0.9em;
   width: 85%;
   margin: auto;
@@ -352,8 +398,8 @@ margin-top: 0.5em;
   text-shadow: 0 0 5px #FFFFFF, 1px 1px 1px rgba(206,206,206,0);
   /* https://cssgenerator.org/box-shadow-css-generator.html */
   display: block;
-  margin: auto;
   margin-top: 45em;
+  margin-bottom: 1.5em;
   line-height: 1.5em;
   letter-spacing: 0.15em;
   text-align: center;
@@ -362,7 +408,7 @@ margin-top: 0.5em;
 .cybertruck section:first-of-type a p{
   display: block;
   margin: auto;
-  margin-top: 2em;
+  /* margin-top: 2em; */
   padding: 0.3em;
   border: solid;
   border-width: 0.3em;
@@ -374,14 +420,30 @@ margin-top: 0.5em;
   font-size: 0.9em;
   color: var(--primary-color);
   text-align: center;
+  transition: 0.3s;
 }
+
+.cybertruck section:first-of-type a p:hover{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.cybertruck section:first-of-type a:focus p{
+  background-color: var(--primary-color);
+  color: var(--cybertruck-primary-color);
+}
+
+
+
+
+
+
 
 
 /* -_-_-_-_-_-_-_-_ SECTION 2 -_-_-_-_-_-_-_-_ */
 
 .cybertruck section:nth-of-type(2){
-  background-image: url(../img/);
-  background-color: black;
+  background-color: var(--cybertruck-primary-color);
   height: auto;
 }
 
@@ -401,3 +463,176 @@ margin-top: 0.5em;
 .cybertruck section:nth-of-type(2) p:last-of-type{
   padding-bottom: 5em;
 }
+
+
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ SECTION 3 (CAROUSELS) -_-_-_-_-_-_-_-_ */
+
+.cybertruck section:nth-of-type(3){
+  margin-top: 5em;
+  max-width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  max-height: 30em; 
+    /* https://css-tricks.com/practical-css-scroll-snapping/ */
+}
+
+.cybertruck section:nth-of-type(3) article{
+  padding: 1em 0;
+  scroll-snap-align: start;
+  background-color: var(--cybertruck-primary-color);
+}
+
+.cybertruck section:nth-of-type(3) article{
+  max-height: 100%;
+}
+
+.cybertruck section:nth-of-type(3) article img{
+  width: 100%;
+}
+
+.cybertruck section:nth-of-type(3) article > p{
+  margin: 0.9em auto;
+}
+
+
+
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ SECTION 4 (CAROUSELS) -_-_-_-_-_-_-_-_ */
+
+.cybertruck section:nth-of-type(4){
+  margin-top: 70px;
+  width: 100%;
+}
+
+.cybertruck section:nth-of-type(4) video{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ RESPONSIVENESS -_-_-_-_-_-_-_-_ */
+
+@media (min-width: 900px){
+  .cybertruck section{
+    width: 80%;
+    margin: auto;
+  }
+
+  .cybertruck section:first-of-type{
+    width: 100%;
+    margin: auto;
+  }
+
+  .cybertruck section h1{
+    width: 80%;
+    margin: auto;
+  }
+  
+  .cybertruck section:nth-of-type(3){
+    max-height: 48.5em;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ Iphone 5 -_-_-_-_-_-_-_-_ */
+
+@media (width: 320px){
+  .cybertruck section:nth-of-type(3){
+    max-height: 24em;
+    margin: auto;
+  }
+
+  .cybertruck section:first-of-type > p{
+    display: none;
+  }
+
+  .cybertruck section:first-of-type a p{
+    margin-top: 34em;
+  }
+}
+
+
+/* -_-_-_-_-_-_-_-_ Iphone 6/7/8  -_-_-_-_-_-_-_-_ */
+
+@media (width: 375px){
+  .cybertruck section:first-of-type > p:first-of-type{
+    margin-top: 36em;
+  }
+}
+
+/* -_-_-_-_-_-_-_-_ Iphone 6/7/8 + -_-_-_-_-_-_-_-_ */
+
+@media (width: 414px){
+  .cybertruck section:nth-of-type(3){
+    max-height: 23em;
+    margin: auto;
+  }
+
+  .cybertruck section:first-of-type > p:first-of-type{
+    margin-top: 38em;
+  }
+
+  .cybertruck section:first-of-type a{
+    display: block;
+  }
+}
+
+/* -_-_-_-_-_-_-_-_ Iphone X -_-_-_-_-_-_-_-_ */
+
+@media (height: 812px){
+  .cybertruck section:first-of-type > p:first-of-type{
+    margin-top: 44em;
+  }
+
+  .cybertruck section:nth-of-type(3){
+      max-height: 24.5em;
+      margin: auto;
+    }
+}
+
+
+
+
+
+
+/* -_-_-_-_-_-_-_-_ FOOTER -_-_-_-_-_-_-_-_ */
+
+footer ul{
+  list-style: none;
+  margin-top: -11em;
+  margin-left: -3em;
+}
+
+footer ul p{
+text-transform: none;
+}
+
+footer ul a{
+  text-decoration: none;
+}
+
+.cybertruck footer ul a{
+  color: var(--cybertruck-text-color);
+}
+
+/* -_-_-_-_-_-_-_-_ END XD -_-_-_-_-_-_-_-_ */
