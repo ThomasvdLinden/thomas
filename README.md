@@ -255,8 +255,9 @@ De laatste week heb ik erg veel tijd in mijn code gestopt. De basis was goed maa
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://css-tricks.com/practical-css-scroll-snapping/  
+2. https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
+3. https://cssgradient.io/
+4. https://cssgenerator.org/box-shadow-css-generator.html 
 
 </details>
