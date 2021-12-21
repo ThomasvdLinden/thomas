@@ -50,9 +50,6 @@ section{
 }
 
 
-
-
-
 /* -_-_-_-_-_-_-_-_ HEADER -_-_-_-_-_-_-_-_ */
 
 header{
@@ -149,9 +146,6 @@ header ul:nth-of-type(2) li a{
   text-decoration: none;
   color: var(--cybertruck-secondary-color);
 }
-
-
-
 
 
 
@@ -347,7 +341,7 @@ a:focus p{
 /* -_-_-_-_-_-_-_-_ HEADER -_-_-_-_-_-_-_-_ */
 
 .cybertruck header{
-  background: linear-gradient(0deg, rgba(63,94,251,0) 0%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,1) 100%);
   /* https://cssgradient.io/ */
 }
 
@@ -516,8 +510,6 @@ a:focus p{
 .cybertruck section:nth-of-type(4) video{
   width: 100%;
 }
-
-
 
 
 
